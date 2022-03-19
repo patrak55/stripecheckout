@@ -22,7 +22,10 @@ export default function Home() {
   });
 
 
-  const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
+
+  const publishableKey =  `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`;
+
+  `${process.env.PUBLISHABLE_KEY}`
   const stripePromise = loadStripe(publishableKey);
   const createCheckOutSession = async () => {
     setLoading(true);
