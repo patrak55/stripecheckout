@@ -28,7 +28,7 @@ export default function Home() {
   const createCheckOutSession = async () => {
     setLoading(true);
     const stripe = await stripePromise;
-    const checkoutSession = await axios.post('/api/create-stripe-session', {
+    const checkoutSession = await axios.post('https://stripecheckout-green.vercel.app/api/create-stripe-session', {
       item: item,
     });
     const result = await stripe.redirectToCheckout({
