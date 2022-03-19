@@ -5,8 +5,8 @@ async function CreateStripeSession(req, res) {
 
   const redirectURL =
     process.env.NODE_ENV === 'development'
-      ? 'https://stripecheckout-green.vercel.app/'
-      : 'https://stripecheckout-green.vercel.app/';
+      ? 'http://localhost:3000'
+      : 'https://stripecheckout-green.vercel.app';
 
   const transformedItem = {
     price_data: {
